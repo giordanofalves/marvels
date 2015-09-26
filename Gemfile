@@ -11,6 +11,7 @@ gem "therubyracer", "~>0.12.2"
 
 group :development, :test do
   gem "pry-byebug", "~> 3.2.0"
+  gem "rspec-rails", "~> 3.3.3"
 end
 
 group :development do
