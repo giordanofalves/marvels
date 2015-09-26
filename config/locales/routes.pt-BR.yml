@@ -1,0 +1,11 @@
+pt-BR:
+  routes:
+    new: "criar"
+    edit: "editar"
+    users: "usuarios"
+    sign_in: "logar"
+    sign_out: "deslogar"
+    sign_up: "registrar"
+    password: "senha"
+    cancel: "cancelar"
+    auth: "autenticacao"

@@ -1,0 +1,13 @@
+<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :email, required: true, autofocus: true %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, t("devise.passwords.send_me_reset_password_instructions") %>
+  </div>
+<% end %>
+
+<%= link_to t("devise.back_to_login"), new_session_path(resource_name) %>
