@@ -1,0 +1,16 @@
+pt-BR:
+  simple_form:
+    required:
+      text: "obrigatório"
+      mark: "*"
+    error_notification:
+      default_message: "Favor checar os erros abaixo:"
+    labels:
+      user:
+        new:
+          email: "E-mail"
+          password: "Senha"
+          password_confirmation:  "Confirmar senha"
+        edit:
+          email: "E-mail."
+          password: "Senha"
