@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+  host: <%= Rails.application.secrets.database["host"] %>
+  username: <%= Rails.application.secrets.database["username"] %>
+  password: <%= Rails.application.secrets.database["password"] %>
+
+development:
+  <<: *default
+  database: <%= %Q|#{Rails.root.to_s.split("/").last}_development| %>
+
+test:
+  <<: *default
+  database: <%= %Q|#{Rails.root.to_s.split("/").last}_test| %>
+
+
+production:
+ <<: *default
+ database: <%= %Q|#{Rails.root.to_s.split("/").last}_production| %>
