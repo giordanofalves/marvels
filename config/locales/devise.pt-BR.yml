@@ -2,6 +2,7 @@
 pt-BR:
   devise:
     login: "Login"
+    login_description: "Preencha seus dados para acesso imediato:"
     back_to_login: "Voltar para login"
     logout: "Sair"
     sign_up: "Cadastre-se"

@@ -1,0 +1,10 @@
+pt-BR:
+  general:
+    project:
+      title: "Marvels"
+    welcome:
+      title: "Bem-vindo a Marvels."
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus, enim et blandit sagittis, nisi justo venenatis nisl, a sagittis enim est et nulla. In in sapien ut tortor commodo aliquet porttitor ut mi. Mauris lobortis purus id dui porttitor, a lacinia lectus consectetur. Sed at sollicitudin justo."
+      links:
+        about: "Sobre nós"
+        hows_work: "Como funciona?"

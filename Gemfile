@@ -24,6 +24,10 @@ end
 group :development do
   gem "web-console", "~> 2.0"
   gem "spring", "~> 1.4.0"
+  gem "better_errors", "~> 2.1.1"
+  gem "zeus", "~> 0.15.4"
+  gem "foreman", "~>  0.78.0"
+  gem "rubocop", "~> 0.36.0", require: false
 end
 
 group :test do
