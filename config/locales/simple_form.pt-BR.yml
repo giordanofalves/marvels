@@ -14,3 +14,7 @@ pt-BR:
         edit:
           email: "E-mail."
           password: "Senha"
+    placeholders:
+      user:
+        email: 'Seu E-mail'
+        password: '******'

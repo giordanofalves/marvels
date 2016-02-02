@@ -5,7 +5,7 @@ module Authentication
     sign_in user
   end
 
-  def logout_user user
+  def logout_user(user)
     @request.env["devise.mapping"] = Devise.mappings[:user]
     sign_out user
   end

@@ -1,13 +1,39 @@
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true %>
-    <%= f.input :password, required: false %>
-    <%= f.input :remember_me, as: :boolean, label: t("devise.sign_in.remember_me") %>
-  </div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-7 text">
+      <h1 class="welcome title"><%= t("general.welcome.title") %></h1>
+      <div class="welcome description">
+        <p><%= t("general.welcome.description") %><p/>
+      </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, t("devise.login") %>
-  </div>
-<% end %>
+      <div class="welcome links">
+        <%= link_to t("general.welcome.links.about") %>
+        <%= link_to t("general.welcome.links.hows_work") %>
+      </div>
+    </div>
 
-<%= shared_links_devise %>
+    <div class="col-sm-5 form-box">
+      <div class="form-top">
+        <h3><%= t("devise.login")%></h3>
+        <p><%= t("devise.login_description")%></p>
+      </div>
+
+      <div class="form-bottom">
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <%= f.input_field :email, autofocus: true, class: "form-control", label_html: { class: "sr-only" } %>
+          <%= f.input_field :password, class: "form-control", label_html: { class: "sr-only" } %>
+
+          <div class="checkbox">
+            <label>
+              <%= f.input :remember_me, as: :boolean, label: t("devise.sign_in.remember_me") %>
+            </label>
+          </div>
+          <%= f.button :submit, t("devise.login"), class: "btn btn-lg btn-primary btn-block"%>
+        <% end %>
+
+        <div class="form-links">
+          <%= shared_links_devise %>
+        </div>
+      </div>
+    </div>
+</div>
