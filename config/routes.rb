@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   localized do
-    root "home#index"
+    root "character#index"
 
     devise_for :users, skip: :omniauth_callbacks
   end
