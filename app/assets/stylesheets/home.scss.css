@@ -1,0 +1,27 @@
+.separator {
+  color: #8899a6;
+  font-weight: bold;
+  margin: 0 1px 0 2px;
+}
+
+.container {
+  position: relative;
+}
+.container:before, .container:after {
+  position: fixed;
+  top: 100px;
+  width: 400px;
+  background-repeat: no-repeat;
+}
+
+.container:before {
+  left:   3px;
+  height: 715px;
+  background-image: url("captain-america.png");
+}
+
+.container:after {
+  right: 3px;
+  height: 698px;
+  background-image: url("iron-man.png");
+}

@@ -1,10 +1,6 @@
 class Character
-  def characters
-    service.response("characters")
-  end
-
-  def character(id)
-    service.response("character")
+  def characters(letter)
+    service.response(service: "characters", letter: letter)
   end
 
   private
