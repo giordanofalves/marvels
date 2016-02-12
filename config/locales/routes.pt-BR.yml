@@ -9,3 +9,5 @@ pt-BR:
     password: "senha"
     cancel: "cancelar"
     auth: "autenticacao"
+    characters: "personagens"
+    update_view: "atualizar_tela"

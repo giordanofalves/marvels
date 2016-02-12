@@ -3,9 +3,8 @@ module Marvel
     require "open-uri"
 
     def response(params)
-      return_json
-      #TODO save response in cache
-      # JSON.load(open(hash_url(params)))
+      # return_json
+      JSON.load(open(hash_url(params)))
     end
 
     private
@@ -16,9 +15,9 @@ module Marvel
       private_key = Rails.application.secrets.marvel_api["private_key"]
       timestamp   = Time.now.to_i.to_s
       digest      = Digest::MD5.hexdigest(timestamp + private_key + public_key)
-      # TODO get params in pagination
-      letter      = "A"
-      base_url + "#{params}?ts=#{timestamp}&apikey=#{public_key}&hash=#{digest}&nameStartsWith=#{letter}&limit=100"
+      letter      = params[:letter]
+
+      base_url + "#{params[:service]}?ts=#{timestamp}&apikey=#{public_key}&hash=#{digest}&nameStartsWith=#{letter}&limit=100"
     end
 
     def return_json
