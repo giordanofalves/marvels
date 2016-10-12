@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   localized do
-    root "character#index"
+    root "characters#index"
+    resources :characters, only: :index
 
     scope :characters do
-      get "update_view/:letter" => "character#update_view", as: "update_view"
+      get "update_view/:letter" => "characters#update_view", as: "update_view"
     end
 
     devise_for :users, skip: :omniauth_callbacks

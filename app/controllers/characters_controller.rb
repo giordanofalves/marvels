@@ -1,4 +1,4 @@
-class CharacterController < ApplicationController
+class CharactersController < ApplicationController
   before_action :character
 
   def index

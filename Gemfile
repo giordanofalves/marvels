@@ -15,6 +15,7 @@ gem "omniauth-facebook", "~> 3.0.0"
 gem "route_translator", "~> 4.1.0"
 
 group :development, :test do
+  gem "byebug"
   gem "pry-byebug", "~> 3.2.0"
   gem "rspec-rails", "~> 3.3.3"
   gem "factory_girl_rails", "~> 4.5.0"

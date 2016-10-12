@@ -10,11 +10,15 @@
     <%= render "layouts/nav_bar" %>
 
     <div class="container">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <%= render "layouts/alphabetic_pagination" %>
+    <div class="row">
+      <div class="col-md-8" style="background-color:blue;">Left Content</div>
+      <div class="col-md-4" style="background-color:pink;">Right Content</div>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= render "layouts/alphabetic_pagination" %>
 
-      <%= yield %>
+        <%= yield %>
+     </div>
     </div>
   </body>
 </html>
