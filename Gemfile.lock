@@ -280,8 +280,5 @@ DEPENDENCIES
   webmock (~> 2.1.0)
   zeus (~> 0.15.4)
 
-RUBY VERSION
-   ruby 2.2.4p230
-
 BUNDLED WITH
    1.13.3
