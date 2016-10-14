@@ -11,6 +11,6 @@ Rails.application.routes.draw do
   end
 
   devise_for :users,
-              skip: [:session, :password, :registration, :confirmation],
-              controllers: { :omniauth_callbacks => "users/omniauth_callbacks" }
+             skip: [:session, :password, :registration, :confirmation],
+             controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
 end

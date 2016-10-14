@@ -2,7 +2,7 @@ class CharactersController < ApplicationController
   before_action :character
 
   def index
-    render :index, locals: { characters: @character.characters("A") }
+    render :index, locals: { characters: @character.characters }
   end
 
   def update_view
