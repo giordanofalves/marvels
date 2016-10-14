@@ -1,15 +1,11 @@
 class Character
-  def characters
-    service.response("characters")
-  end
-
-  def character(id)
-    service.response("character")
+  def characters(letter="A")
+    service.response(service: "characters", letter: letter)
   end
 
   private
 
   def service
-    service = Marvel::Service.new
+    Marvel::Service.new
   end
 end
