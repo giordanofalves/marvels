@@ -7,3 +7,5 @@
 /tmp
 
 coverage
+
+/config/secrets.yml
