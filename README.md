@@ -1,5 +1,5 @@
 # Marvels
-[![Build Status](https://travis-ci.org/giordanofalves/marvels.svg)](https://travis-ci.org/giordanofalves/marvels)
+[![Build Status](https://travis-ci.org/giordanofalves/marvels.svg?branch=master)](https://travis-ci.org/giordanofalves/marvels)
 [![Code Climate](https://codeclimate.com/github/giordanofalves/marvels/badges/gpa.svg)](https://codeclimate.com/github/giordanofalves/marvels)
 
 * Ruby version: 2.2.3
