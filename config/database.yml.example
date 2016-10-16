@@ -3,9 +3,9 @@ default: &default
   encoding: unicode
   pool: 5
   timeout: 5000
-  host: <%= Rails.application.secrets.database["host"] %>
-  username: <%= Rails.application.secrets.database["username"] %>
-  password: <%= Rails.application.secrets.database["password"] %>
+  host: <%= ENV["DATABASE_HOST"] %>
+  username: <%= ENV["DATABASE_USERNAME"] %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>
 
 development:
   <<: *default
