@@ -37,4 +37,5 @@ group :test do
   gem "vcr", "~> 3.0.3"
   gem "shoulda-matchers", "~> 3.0.1"
   gem "simplecov", "~> 0.11.1", require: false
+  gem "codeclimate-test-reporter", require: false
 end
