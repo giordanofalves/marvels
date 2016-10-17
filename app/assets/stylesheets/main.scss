@@ -28,11 +28,11 @@
 .container:before {
   left:   3px;
   height: 715px;
-  background-image: url("captain-america.png");
+  background-image: image-url("captain-america.png");
 }
 
 .container:after {
   right: 3px;
   height: 698px;
-  background-image: url("iron-man.png");
+  background-image: image-url("iron-man.png");
 }
