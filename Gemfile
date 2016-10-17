@@ -13,6 +13,7 @@ gem "simple_form", "~> 3.2.0"
 gem "devise", "~> 3.5.5"
 gem "omniauth-facebook", "~> 3.0.0"
 gem "route_translator", "~> 4.1.0"
+gem "airbrake", "~> 5.5"
 
 group :development, :test do
   gem "byebug", "~> 5.0.0"
