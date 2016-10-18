@@ -7,8 +7,8 @@
 * Rails version: 45.0.0.1
 
 * System dependencies
-  Marvel API
-  Facebook API
+  * Marvel API
+  * Facebook API
 
 * Database creation
   wip
