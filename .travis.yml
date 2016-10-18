@@ -1,11 +1,11 @@
 language: ruby
 rvm:
-  - 2.2.4
+  - 2.3.1
 services:
   - postgresql
 addons:
-    code_climate:
-        repo_token: f6718c30ecd81705ba2dc1a39a03e9546badf7ada2355f601ff7e7661acbba21
+  code_climate:
+    repo_token: f6718c30ecd81705ba2dc1a39a03e9546badf7ada2355f601ff7e7661acbba21
 
 before_script:
   - psql -c "create database marvels_test;" -U postgres

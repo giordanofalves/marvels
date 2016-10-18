@@ -15,7 +15,6 @@ module Marvel
       timestamp   = Time.now.to_i.to_s
       digest      = Digest::MD5.hexdigest(timestamp + private_key + public_key)
       letter      = params[:letter]
-
       base_url + "#{params[:service]}?ts=#{timestamp}&apikey=#{public_key}&hash=#{digest}&nameStartsWith=#{letter}&limit=100"
     end
   end

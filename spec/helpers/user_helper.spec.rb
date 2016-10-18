@@ -1,7 +1,8 @@
 require "rails_helper"
 
 RSpec.describe UserHelper, type: :helper do
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
+
   helper do
     def resource_name
       :user

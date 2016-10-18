@@ -21,7 +21,7 @@ RSpec.describe ApplicationController, type: :controller do
     end
 
     it "Should redirect to login when not have a current_user", skip_before: true do
-      expect(response).to redirect_to(new_user_session_pt_br_path)
+      expect(response).to redirect_to(new_user_session_path)
     end
   end
 end

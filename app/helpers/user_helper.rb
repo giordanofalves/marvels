@@ -23,7 +23,7 @@ module UserHelper
     end
 
     if devise_mapping.registerable? && controller_name != "registrations"
-      links << { name: t("devise.facebook.login"), path: user_omniauth_authorize_path(:facebook) }
+      links << { name: t("devise.facebook.login"), path: user_facebook_omniauth_authorize_path(:facebook) }
       links << { name: t("devise.sign_up"), path: new_registration_path(resource_name) }
     end
 
