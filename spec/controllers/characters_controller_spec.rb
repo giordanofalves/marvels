@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe CharactersController, type: :controller do
+RSpec.describe CharactersController, type: :controller do
   before do
     login_user
     Timecop.freeze "2016-01-01T00:00:24+00:00"

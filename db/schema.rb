@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -17,7 +16,6 @@ ActiveRecord::Schema.define(version: 20151001013110) do
   enable_extension "plpgsql"
 
   create_table "users", force: :cascade do |t|
-    t.string   "cpf",                    default: "", null: false
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -28,12 +26,10 @@ ActiveRecord::Schema.define(version: 20151001013110) do
     t.string   "name"
     t.string   "provider"
     t.string   "uid"
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["provider"], name: "index_users_on_provider", using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+    t.index ["uid"], name: "index_users_on_uid", using: :btree
   end
-
-  add_index "users", ["cpf"], name: "index_users_on_cpf", unique: true, using: :btree
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["provider"], name: "index_users_on_provider", using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-  add_index "users", ["uid"], name: "index_users_on_uid", using: :btree
 
 end
