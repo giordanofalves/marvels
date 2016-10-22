@@ -1,6 +1,6 @@
 module ApplicationHelper
   def home_link
-    link_to t("general.project.title").upcase, root_path, class: "navbar-brand"
+    link_to(image_tag("m-icon"), root_path, class: "navbar-brand")
   end
 
   def separator(content)
