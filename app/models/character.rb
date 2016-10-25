@@ -1,4 +1,6 @@
-class Character
+class Character < ActiveRecord::Base
+  validates :name, :modified_at, presence: true
+
   def characters(letter="A")
     service.response(service: "characters", letter: letter)
   end
