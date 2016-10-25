@@ -10,3 +10,8 @@ pt-BR:
         hows_work: "Como funciona?"
     characters:
       title: "Galeria de Personagens"
+    tasks:
+      characters:
+        import:
+          successful: "%{character_name} importado com sucesso."
+          already_updated: "%{character_name} sem atualizações."
