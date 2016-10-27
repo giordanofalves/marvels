@@ -1,8 +1,10 @@
 class Character < ActiveRecord::Base
   validates :name, :modified_at, presence: true
 
-  def characters(letter="A")
-    service.response(service: "characters", letter: letter)
+  has_one :image, as: :imageable
+
+  def characters(letter="A", offset=0)
+    service.response(service: "characters", letter: letter, offset: offset)
   end
 
   private
