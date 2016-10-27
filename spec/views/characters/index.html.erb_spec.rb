@@ -1,5 +1,26 @@
 require "rails_helper"
+include CharacterHelper
 
 RSpec.describe "characters/index.html.erb", type: :view do
-  pending("Need work in cache response from webserver before this specs.")
+  let(:character_1) { create(:character, :with_image) }
+  let(:character_2) { create(:character, :with_image) }
+
+  before do
+    render template: "characters/index.html.erb",
+           locals: { characters: [character_1, character_2] }
+  end
+
+  it "display title" do
+    expect(rendered).to have_content(I18n.t("general.characters.title"))
+  end
+
+  it "display characters" do
+    expect(rendered).to have_content(character_1.name)
+    expect(rendered).to have_content(character_2.name)
+  end
+
+  it "display images" do
+    expect(rendered).to include(character_1.image.standard_url.split("?").first)
+    expect(rendered).to include(character_2.image.standard_url.split("?").first)
+  end
 end

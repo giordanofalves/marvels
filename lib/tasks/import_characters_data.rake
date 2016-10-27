@@ -2,16 +2,16 @@ namespace :characters do
   desc "Import characters data from marvel api to Character model."
 
   task import_data: :environment do
-    @character = Character.new
+    character_service = Marvel::Service::Character.new
 
     ("A".."Z").map do |char|
-      response  = @character.characters(char)
+      response  = character_service.characters(char)
       total     = response["data"]["total"]
 
       create_characters(response["data"]["results"])
 
       if total > 100
-        response = @character.characters(char, 99)
+        response = character_service.characters(char, 99)
         create_characters(response["data"]["results"])
       end
     end

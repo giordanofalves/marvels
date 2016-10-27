@@ -4,14 +4,13 @@
     <h1 class="page-header"><%= t("general.characters.title") %></h1>
   </div>
 
-  <% characters["data"]["results"].each do |character| %>
+  <% characters.each do |character| %>
     <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
       <div class="hovereffect">
-        <%= image_tag("#{character['thumbnail']['path']}/standard_xlarge.#{character['thumbnail']['extension']}",
-                      class: "img-responsive thumbnail") %>
+        <%= image_tag(character.image.standard_url, class: "img-responsive thumbnail") %>
 
         <div class="overlay">
-           <h2><%= character["name"] %></h2>
+           <h2><%= character.name %></h2>
         </div>
       </div>
     </div>
