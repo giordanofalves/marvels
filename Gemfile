@@ -14,6 +14,7 @@ gem "devise", "~> 4.2.0"
 gem "omniauth-facebook", "~> 4.0.0"
 gem "route_translator", "~> 5.0.2"
 gem "airbrake", "~> 5.5.0"
+gem "coffee-script", "~> 2.4", ">= 2.4.1"
 
 group :development, :test do
   gem "byebug", "~> 9.0.6"
