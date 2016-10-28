@@ -1,15 +1,7 @@
 class Character < ActiveRecord::Base
-  validates :name, :modified_at, presence: true
-
   has_one :image, as: :imageable
 
-  def characters(letter="A", offset=0)
-    service.response(service: "characters", letter: letter, offset: offset)
-  end
+  validates :name, :modified_at, presence: true
 
-  private
-
-  def service
-    Marvel::Service.new
-  end
+  scope :start_by, ->(letter="A") { where("name LIKE '#{letter}%'") }
 end

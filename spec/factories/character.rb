@@ -5,5 +5,9 @@ FactoryGirl.define do
     description   Faker::Lorem.sentence
     url           Faker::Internet.url
     modified_at   Faker::Date.between(2.weeks.ago, Date.today)
+
+    trait :with_image do
+      image
+    end
   end
 end
