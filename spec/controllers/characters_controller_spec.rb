@@ -17,7 +17,7 @@ RSpec.describe CharactersController, type: :controller do
     end
   end
 
-  describe "#update_view", :vcr do
+  describe "#update_view" do
     letter = "S"
 
     it "renders the index template" do

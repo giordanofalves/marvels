@@ -13,12 +13,10 @@ module Authentication
   def sign_in_helper(user)
     visit new_user_session_path
 
-    VCR.use_cassette("characters_controller/characters") do
-      fill_in :user_email,    with: user.email
-      fill_in :user_password, with: user.password
+    fill_in :user_email,    with: user.email
+    fill_in :user_password, with: user.password
 
-      click_button I18n.t("devise.login")
-    end
+    click_button I18n.t("devise.login")
   end
 end
 
