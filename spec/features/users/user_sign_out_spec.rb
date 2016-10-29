@@ -3,12 +3,7 @@ require "rails_helper"
 RSpec.describe "Sign out", type: :feature do
   describe "User is able to Sign Out" do
     before do
-      Timecop.freeze "2016-01-01T00:00:24+00:00"
       sign_in_helper(create(:user))
-    end
-
-    after do
-      Timecop.return
     end
 
     it "User is redirected to sign in page" do
