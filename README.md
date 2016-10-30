@@ -28,13 +28,13 @@ bundle install
 ```
 
 ## System dependencies
-  ### Marvel API
+### Marvel API
 
-  ###### How to get a key
+###### How to get a key
   Access [developer.marvel.com](https://developer.marvel.com/) and click in Get a Key.
   You need a marvel account.
 
-  ###### Config Marvel API in Marvels
+###### Config Marvel API in Marvels
   Export environment variables in your system
 
   ```
@@ -42,11 +42,11 @@ bundle install
   export MARVEL_API_PRIVATE="PUT HERE YOUR PRIVATE KEY"
   ```
 
-  ### Facebook API
-  ###### How to get a key
+### Facebook API
+###### How to get a key
   Access [developers.facebook.com](https://developers.facebook.com/) to get your key.
 
-  ###### Config Facebook API in Marvels
+###### Config Facebook API in Marvels
   Export environment variables in your system
 
   ```
