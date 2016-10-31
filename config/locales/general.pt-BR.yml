@@ -10,6 +10,8 @@ pt-BR:
         hows_work: "Como funciona?"
     characters:
       title: "Galeria de Personagens"
+      description: "Descrição"
+      description_not_found: "Não existe descrição para esse personagem."
     tasks:
       characters:
         import:

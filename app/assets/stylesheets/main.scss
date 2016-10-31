@@ -17,7 +17,8 @@ footer {
   width: 400px;
   background-repeat:no-repeat;
   background-size:contain;
-  background-position:center
+  background-position:center;
+  z-index: -100;
 }
 
 .container:before {

@@ -11,4 +11,9 @@ module CharacterHelper
       end
     end
   end
+
+  def description(character)
+    not_found = t("general.characters.description_not_found")
+    character.description.present? ? character.description : not_found
+  end
 end

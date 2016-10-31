@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+  <div class="panel-heading"><%= character.name %></div>
+  <div class="panel-body">
+    <div class="media">
+      <div class="media-left">
+        <%= image_tag(character.image.portrait_url, class: "media-object") %>
+      </div>
+
+      <div class="media-body">
+        <h4><%= t("general.characters.description") %></h4>
+        <%= description(character) %>
+      </div>
+    </div>
+  </div>
+</div>
