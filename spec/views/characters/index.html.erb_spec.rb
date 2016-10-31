@@ -23,4 +23,12 @@ RSpec.describe "characters/index.html.erb", type: :view do
     expect(rendered).to include(character_1.image.standard_url.split("?").first)
     expect(rendered).to include(character_2.image.standard_url.split("?").first)
   end
+
+  it "display links" do
+    match1 = %r{<a href="\/characters\/#{character_1.id}">#{character_1.name}<\/a>}
+    match2 = %r{<a href="\/characters\/#{character_2.id}">#{character_2.name}<\/a>}
+
+    expect(rendered).to match(match1)
+    expect(rendered).to match(match2)
+  end
 end

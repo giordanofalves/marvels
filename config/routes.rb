@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root "characters#index"
-  resources :characters, only: :index
+  resources :characters, only: [:index, :show]
 
   scope :characters do
     get "update_view/:letter" => "characters#update_view", as: "update_view"

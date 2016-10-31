@@ -30,4 +30,18 @@ RSpec.describe CharactersController, type: :controller do
       expect(response.status).to eq(200)
     end
   end
+
+  describe "#show" do
+    let(:character) { create(:character) }
+
+    it "renders the index template" do
+      get :show, params: { id: character.id }
+      expect(response).to render_template(:show)
+    end
+
+    it "has a 200 status code" do
+      get :show, params: { id: character.id }
+      expect(response.status).to eq(200)
+    end
+  end
 end

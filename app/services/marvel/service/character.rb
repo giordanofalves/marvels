@@ -1,14 +1,12 @@
 module Marvel
   module Service
-    class Character
+    class Character < Marvel::Support::Service
       def characters(letter="A", offset=0)
         service.response(service: "characters", letter: letter, offset: offset)
       end
 
-      private
-
-      def service
-        Marvel::Support::Service.new
+      def character(id)
+        service.response(service: "characters/#{id}")
       end
     end
   end
