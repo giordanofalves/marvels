@@ -13,7 +13,6 @@ module CharacterHelper
   end
 
   def description(character)
-    not_found = t("general.characters.description_not_found")
-    character.description.present? ? character.description : not_found
+    character.try(:description) || t("general.characters.description_not_found")
   end
 end
