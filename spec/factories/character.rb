@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :character do
-    character_id  Faker::Superhero.name
+    character_id  Faker::Number.number(5)
     name          Faker::Superhero.name
     description   Faker::Lorem.sentence
     url           Faker::Internet.url
