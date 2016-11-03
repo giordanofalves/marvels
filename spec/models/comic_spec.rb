@@ -24,6 +24,7 @@ RSpec.describe Comic, type: :model do
 
   describe "Associations" do
     it { should have_one :image }
+    it { have_and_belong_to_many :comics }
   end
 
   describe "Factory" do

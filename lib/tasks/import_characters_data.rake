@@ -20,7 +20,7 @@ end
 
 def create_characters(results)
   results.each do |result|
-    character = check_if_news(result)
+    character = check_if_new_character(result)
     if character
       character.character_id  = result["id"]
       character.name          = result["name"]
@@ -36,17 +36,17 @@ def create_characters(results)
   end
 end
 
-def check_if_news(result)
+def check_if_new_character(result)
   character = Character.find_by(character_id: result["id"])
 
   if character
-    modified?(character, result["modified"])
+    character_modified?(character, result["modified"])
   else
     Character.new
   end
 end
 
-def modified?(character, data_modified)
+def character_modified?(character, data_modified)
   (character.modified_at != data_modified) ? character : nil
 end
 
