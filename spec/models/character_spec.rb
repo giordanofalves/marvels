@@ -16,6 +16,11 @@ RSpec.describe Character, type: :model do
     it { should validate_presence_of(:modified_at) }
   end
 
+  describe "Associations" do
+    it { should have_one :image }
+    it { have_and_belong_to_many :characters }
+  end
+
   describe "Factory" do
     let(:character) { build(:character) }
 
