@@ -22,17 +22,5 @@ RSpec.describe Marvel::Service::Character do
                                       "attributionHTML", "etag", "data")
       end
     end
-
-    it "return response hash", :vcr do
-      VCR.use_cassette("characters_controller/character") do
-        response  = @characters_service.character(1011490)
-
-        expect(response["code"]).to eq(200)
-        expect(response).to         be_a(Hash)
-        expect(response.keys).to    contain_exactly("code", "status",
-                                      "copyright", "attributionText",
-                                      "attributionHTML", "etag", "data")
-      end
-    end
   end
 end
