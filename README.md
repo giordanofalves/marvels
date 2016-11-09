@@ -65,6 +65,11 @@ Run [import_characters_data.rake](https://github.com/giordanofalves/marvels/blob
 ```console
  rails characters:import_data
 ```
+
+Run [import_comics_data.rake](https://github.com/giordanofalves/marvels/blob/master/lib/tasks/import_comics_data.rake) task to import comics data.
+```console
+ rails comics:import_data
+```
 ## How to run the test suite
 ```console
 rspec ./spec
