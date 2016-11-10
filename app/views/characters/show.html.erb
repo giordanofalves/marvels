@@ -11,5 +11,15 @@
         <%= description(character) %>
       </div>
     </div>
+    <%= back_link %>
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading"><%= t("general.characters.comics") %></div>
+  <div class="panel-body">
+    <%= comics_by_character(character.comics) %>
+    <%= back_link %>
   </div>
 </div>

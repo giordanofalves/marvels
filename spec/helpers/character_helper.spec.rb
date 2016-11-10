@@ -9,7 +9,7 @@ RSpec.describe CharacterHelper, type: :helper do
 
   describe "#alphabetic_pagination" do
     it "return alphabetic list" do
-      expect(helper.alphabetic_pagination).to match(/[ABCDEFGHIJKMNOPQRSTUVWXYZ]/)
+      expect(helper.alphabetic_pagination).to match(%r{[ABCDEFGHIJKMNOPQRSTUVWXYZ]})
     end
 
     it "return update_view_path" do
@@ -29,6 +29,20 @@ RSpec.describe CharacterHelper, type: :helper do
     it "don't return character description" do
       description = helper.description(character_without_description)
       expect(description).to eq(I18n.t("general.characters.description_not_found"))
+    end
+  end
+
+  describe "#comics_by_character" do
+    let(:character_with_comics) { build_stubbed(:character, :with_comics) }
+
+    it "return character comics" do
+      comics = helper.comics_by_character(character_with_comics.comics)
+      expect(comics.present?).to be(true)
+    end
+
+    it "don't return character comics" do
+      comics = helper.comics_by_character(nil)
+      expect(comics).to eq(I18n.t("general.characters.comics_not_found"))
     end
   end
 end
