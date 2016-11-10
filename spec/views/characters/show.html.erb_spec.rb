@@ -1,8 +1,9 @@
 require "rails_helper"
+include ApplicationHelper
 include CharacterHelper
 
 RSpec.describe "characters/show.html.erb", type: :view do
-  let(:character) { create(:character, :with_image) }
+  let(:character) { build_stubbed(:character, :with_image, :with_comics) }
 
   before do
     render template: "characters/show.html.erb",
@@ -20,5 +21,14 @@ RSpec.describe "characters/show.html.erb", type: :view do
 
   it "display image" do
     expect(rendered).to include(character.image.portrait_url.split("?").first)
+  end
+
+  it "display black link" do
+    expect(rendered).to include(t("general.project.back"))
+  end
+
+  it "display comics image" do
+    random_image = character.comics.sample.image.portrait_url.split("?").first
+    expect(rendered).to include(random_image)
   end
 end

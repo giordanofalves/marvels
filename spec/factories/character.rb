@@ -9,5 +9,9 @@ FactoryGirl.define do
     trait :with_image do
       image
     end
+
+    trait :with_comics do
+      after(:stub) { |character| character.comics = 3.times.map { create(:comic, :with_image) } }
+    end
   end
 end

@@ -30,10 +30,8 @@
 
 .hovereffect h2 {
   text-transform:uppercase;
-  color:#fff;
   text-align:center;
   position:relative;
-  font-size:17px;
   background:rgba(0,0,0,0.6);
   -webkit-transform:translatey(-100px);
   -ms-transform:translatey(-100px);
@@ -41,7 +39,14 @@
   -webkit-transition:all .2s ease-in-out;
   transition:all .2s ease-in-out;
   padding: 10px;
-  top: 180px;
+  top: 130px;
+}
+
+.hovereffect h2 a{
+  color:#fff;
+  font-size:17px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .hovereffect:hover img {
@@ -61,4 +66,12 @@
   -ms-transform:translatey(0);
   -webkit-transform:translatey(0);
   transform:translatey(0);
+}
+
+.comics-list .img-thumbnail{
+  margin: 20px 20px 20px 30px;
+}
+
+.comics-list .img-thumbnail{
+  margin-right: 30px;
 }

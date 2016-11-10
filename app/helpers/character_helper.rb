@@ -13,6 +13,20 @@ module CharacterHelper
   end
 
   def description(character)
-    character.try(:description) || t("general.characters.description_not_found")
+    character.description.present? ? character.description : t("general.characters.description_not_found")
+  end
+
+  def comics_by_character(comics)
+    comics.present? ? comics_list(comics) : t("general.characters.comics_not_found")
+  end
+
+  private
+
+  def comics_list(comics)
+    content_tag(:div, class: "comics-list") do
+      comics.each do |comic|
+        concat(image_tag(comic.image.portrait_url, class: "img-thumbnail"))
+      end
+    end
   end
 end
